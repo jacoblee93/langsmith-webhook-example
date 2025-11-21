@@ -31,7 +31,7 @@ uv run uvicorn server:app --reload
 
 ## Local testing (optional)
 
-You can host this webhook using whatever setup you are most comfortable with, but you can use Ngrok for local testing:
+You can host this webhook using whatever setup you are most comfortable with, but you can use [ngrok](https://ngrok.com/) to expose your locally running server to LangSmith for testing:
 
 ```bash
 ngrok http 8000
