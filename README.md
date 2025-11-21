@@ -3,9 +3,13 @@
 This repo contains an example of a LangSmith session webhook that pulls a previously saved prompt from the
 [LangSmith prompt hub](https://smith.langchain.com/prompts), formats it with details from a payload,
 calls an LLM, and finally scores the run by creating feedback based on the LLM response.
+It does not use any external runtime dependencies other than `fastapi`, `openai`, `python-dotenv`, and `uvicorn`.
 
 The pulled prompt is a [hardcoded public prompt](https://smith.langchain.com/prompts/simple-public-evaluator) in this example, but any prompt with an output schema will work.
 The demo templating here expects the prompt to have variables named `{{inputs}}` and `{{outputs}}`, but you can customize this to your liking.
+
+> [!NOTE]
+> In general, we suggest using our [client SDKs](https://github.com/langchain-ai/langsmith-sdk) if possible, particularly for pulling/deserializing prompts - this minimal example is designed mostly as a proof of concept.
 
 ## Setup
 
@@ -51,3 +55,7 @@ Save, and this evaluator will run whenever a matching run comes in. Rules can ta
 You should see feedback matching the test evaluator once the evaluator runs:
 
 ![](./static/img/feedback.png)
+
+## Further work
+
+This is a minimal example - you can also create and associate evaluator runs for given feedbacks, use alternative models, and more.
