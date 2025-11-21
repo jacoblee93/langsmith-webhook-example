@@ -50,4 +50,4 @@ Save, and this evaluator will run whenever a matching run comes in. Rules can ta
 
 You should see feedback matching the test evaluator once the evaluator runs:
 
-![]
+![](./static/img/feedback.png)
