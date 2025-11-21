@@ -1,0 +1,17 @@
+[project]
+name = "langsmith-webhook-example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.121.3",
+    "openai>=2.8.1",
+    "python-dotenv>=1.2.1",
+    "uvicorn>=0.38.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.5",
+]
